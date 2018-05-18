@@ -14,6 +14,7 @@ namespace UsingViewComponents
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            //  add memory repositories
             services.AddSingleton<IProductRepository, MemoryProductRepository>();
             services.AddSingleton<ICityRepository, MemoryCityRepository>();
             services.AddMvc();
