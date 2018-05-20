@@ -1,6 +1,8 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using UsingViewComponents.Models;
+using Microsoft.AspNetCore.Mvc.ViewComponents;
+using Microsoft.AspNetCore.Html;
 
 namespace UsingViewComponents.Components
 {
@@ -15,7 +17,7 @@ namespace UsingViewComponents.Components
 
         public IViewComponentResult Invoke()
         {
-            return Content("This is a <h3><i>string</i></h3>");
+            return new HtmlContentViewComponentResult(new HtmlString("This is a <h3><i>string</i></h3>"));
         }
     }
 }
